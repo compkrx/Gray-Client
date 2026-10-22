@@ -1,0 +1,14 @@
+// Isolated tests remain runnable even when Minecraft/Fabric downloads are unavailable.
+plugins { id 'java' }
+repositories { mavenCentral() }
+dependencies {
+    implementation 'com.google.code.gson:gson:2.11.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+sourceSets {
+    main.java { srcDir '../src/main/java'; include 'com/grayclient/Setting.java' }
+    test.java { srcDir '../src/test/java'; include 'com/grayclient/SettingTest.java' }
+}
+tasks.withType(JavaCompile).configureEach { options.release = 21 }
+test { useJUnitPlatform() }

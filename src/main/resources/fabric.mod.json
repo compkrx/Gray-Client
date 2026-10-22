@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "grayclient",
+  "version": "3.0.0",
+  "name": "Gray Client",
+  "description": "Utility, farming and combat modules with a ClickGUI (1.21.11)",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.grayclient.GrayClient"
+    ]
+  },
+  "mixins": [
+    "grayclient.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": "1.21.11",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

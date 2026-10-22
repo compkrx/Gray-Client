@@ -1,0 +1,7 @@
+{
+  "required": true,
+  "package": "com.grayclient.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": ["VelocityMixin", "MiningMixin", "FishingSoundMixin"],
+  "injectors": { "defaultRequire": 1 }
+}
